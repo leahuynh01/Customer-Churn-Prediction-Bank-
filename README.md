@@ -1,6 +1,6 @@
-# Customer Churn Prediction for Bank
+# Customer Churn Prediction for a Bank
 ## Business Problem
-Customer churn is a critical issue for Bank, leading to revenue loss, low customer engagement and increased acquisition costs. This project aims to predict customer churn by identifying key factors influencing retention and enabling businesses to take proactive measures.
+Customer churn is a critical issue for Banks, leading to revenue loss, low customer engagement and increased acquisition costs. This project aims to predict customer churn by identifying key factors influencing retention and enabling businesses to take proactive measures.
 
 ## Business Questions
 - Which customers are most likely to churn?
@@ -34,15 +34,35 @@ Python, Pandas, NumPy, Scikit-learn, Tensorflow, Matplotlib, Seaborn
 - Model Evaluation: Cross-validation with StratifiedKFold, precision-recall analysis
 
 ## Results
+![Bar Chart](Photos/barchart.png)
 
+![Box Plot Chart](Photos/boxplot.png)
 
-Baseline Model: Logistic Regression achieved ~65% accuracy
+- Which customers are most likely to churn?
+The analysis reveals that customers most likely to churn are those from Germany, female customers, and inactive members who have not engaged with their accounts. Additionally, customers with higher balances, contrary to expectations, exhibit a higher churn rate, suggesting possible dissatisfaction despite significant deposits. Older customers are also more prone to leaving, indicating that engagement strategies for this demographic may be lacking.
 
-Optimized Model: LightGBM achieved ~78% accuracy, 71% precision, and 76% recall
+- What are the key drivers of customer churn?
+Key drivers of churn include low engagement, where customers with fewer products and inactive accounts are more likely to leave. Demographics, particularly gender, show that female customers churn more frequently.
 
-Business Impact: With targeted retention strategies, the company can reduce churn by 10-15%, potentially increasing revenue retention by $X million.
+- How can the company optimize retention strategies to reduce churn?
+To optimize retention, the company should prioritize proactive engagement with inactive customers, offering personalized incentives and targeted communication. High-balance customers, who are valuable to the company, could benefit from exclusive services and financial advisory programs to strengthen loyalty.
 
-Reproducibility: The entire pipeline is documented, and models are saved in the models folder for future use.
+- What is the expected revenue impact if churn is reduced?
+Reducing churn can have a significant revenue impact, particularly by retaining high-value customers with large account balances. Engaging inactive members could increase customer lifetime value (CLV), while cross-selling financial products could boost per-customer revenue and improve overall retention.
+
+- Model performance
+
+![Model Accuracy](Photos/accuracy.png)
+SVC is the highest performance model, achieved ~77% accuracy, 83% precision, 77% recall, and 79 f1 score.
+
+![Model2 Accuracy](Photos/accuracy2.png)
+Sequential model achieved ~78% precision, 80% recall, 74% f1 score.
+
+=> SVC is the optimized Model
+
+- Business Impact: With targeted retention strategies, the company can reduce churn rate and potentially increasing revenue retention.
+
+- Reproducibility: The entire pipeline is documented, and models are saved in the models folder for future use.
 
 ## Growth & Next Steps
 - Implement the trained model as an API or within a business dashboard.
